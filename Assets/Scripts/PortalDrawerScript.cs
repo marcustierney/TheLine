@@ -56,6 +56,14 @@ public class PortalDrawer : MonoBehaviour
 
         m.vertices = localVerts;
 
+        // Assuming your four points form a rectangle in order:
+        Vector2[] uvs = new Vector2[4];
+        uvs[0] = new Vector2(0, 0);
+        uvs[1] = new Vector2(1, 0);
+        uvs[2] = new Vector2(1, 1);
+        uvs[3] = new Vector2(0, 1);
+        m.uv = uvs;
+
         //Triangles
         m.triangles = new int[] { 0, 1, 2, 0, 2, 3 };
 
