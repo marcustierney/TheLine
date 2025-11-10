@@ -8,6 +8,7 @@ TagManager:
   - ExitDoor
   - Key
   - DoorKey
+  - Pickup
   layers:
   - Default
   - TransparentFX
