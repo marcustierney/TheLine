@@ -212,7 +212,6 @@ GameObject:
   - component: {fileID: 100688171}
   - component: {fileID: 100688176}
   - component: {fileID: 100688175}
-  - component: {fileID: 100688177}
   - component: {fileID: 100688178}
   m_Layer: 0
   m_Name: Player
@@ -306,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 100688170}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 4.33, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -354,25 +353,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &100688177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100688170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d12d448be75434db693071758550b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionDistance: 10
-  doorUnlocked: 0
-  LockedDoorText: {fileID: 0}
-  Locked2DoorText: {fileID: 0}
-  DoorBreakText: {fileID: 0}
-  GrabKeyText: {fileID: 0}
-  TeleportText: {fileID: 0}
 --- !u!114 &100688178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +369,7 @@ MonoBehaviour:
   holdPosition: {fileID: 1970779066}
   pickupRange: 10
   moveSpeed: 10
+  portalDrawer: {fileID: 330585548}
 --- !u!1 &253815215
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +739,8 @@ MonoBehaviour:
   playerCamera: {fileID: 330585546}
   pointPrefab: {fileID: 3782404268373702291, guid: 6acf532809a4cec4bb7b2102a68ff19e, type: 3}
   portalQuadPrefab: {fileID: 1667171639571360265, guid: e3e872bd27ef24444b0d2891a502b313, type: 3}
+  portalViewCamera: {fileID: 1666557569}
+  currentPortal: {fileID: 0}
 --- !u!1 &386918695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1420,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666557566}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1666557569
 Camera:
   m_ObjectHideFlags: 0
@@ -1498,7 +1481,7 @@ Transform:
   m_GameObject: {fileID: 1666557566}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 3.62, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1849,16 +1832,28 @@ PrefabInstance:
       value: KnowledgeCube
       objectReference: {fileID: 0}
     - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.66
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.8832016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8763968590484940908, guid: 40e5a7a556315ad4fa030fe175c29353, type: 3}
       propertyPath: m_LocalRotation.w
