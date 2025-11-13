@@ -19,8 +19,8 @@ public class PortalDrawer : MonoBehaviour
 
     void PlacePoint()
     {
-        //Pos of each pointer (10 units)
-        Vector3 pointPos = playerCamera.position + playerCamera.forward * 10f;
+        //Pos of each pointer (5 units)
+        Vector3 pointPos = playerCamera.position + playerCamera.forward * 5f;
 
         //Add marker
         Instantiate(pointPrefab, pointPos, Quaternion.identity);
